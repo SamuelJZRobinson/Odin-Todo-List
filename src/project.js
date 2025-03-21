@@ -56,11 +56,12 @@ export class Project{
   }
 
   editProject(index){
-
+    projectManager.renderProjects();
   }
 
   deleteProject(index){
     projectManager.deleteProject(index);
+    projectManager.renderProjects();
   }
 
   addTodo(){
