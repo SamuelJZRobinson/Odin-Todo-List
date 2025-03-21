@@ -11,14 +11,15 @@ export class ProjectManager{
     return this.projectList;
   }
 
-  createProject(){
-    let title = prompt("Project title:");
+  createProject(title){
     this.projectList.push(new Project(title));
     this.renderProjects();
+    console.log(this.getProjects());
   }
 
   deleteProject(index){
     this.projectList = this.projectList.filter(project => project.index !== index);
+    console.log(this.getProjects());
   }
 
   renderProjects(){
@@ -78,5 +79,5 @@ export class Project{
   }
 }
 
-let projectManager = new ProjectManager();
+export let projectManager = new ProjectManager();
 // projectManager.createProject();
