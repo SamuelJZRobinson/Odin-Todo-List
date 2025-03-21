@@ -33,11 +33,11 @@ export class ProjectManager{
   
       const CONTROLS = document.createElement("div");
       const EDIT_BUT = document.createElement("span");
-      EDIT_BUT.setAttribute("class","material-icons-outlined");
+      EDIT_BUT.setAttribute("class","material-icons-outlined but");
       EDIT_BUT.textContent = "edit";
       EDIT_BUT.addEventListener("click", () => project.editProject(project.index));
       const DELETE_BUT = document.createElement("span");
-      DELETE_BUT.setAttribute("class","material-icons-outlined");
+      DELETE_BUT.setAttribute("class","material-icons-outlined but");
       DELETE_BUT.textContent ="delete"
       DELETE_BUT.addEventListener("click", () => project.deleteProject(project.index));
       CONTROLS.append(EDIT_BUT,DELETE_BUT);
@@ -79,4 +79,4 @@ export class Project{
 }
 
 let projectManager = new ProjectManager();
-projectManager.createProject();
+// projectManager.createProject();

@@ -6,26 +6,22 @@
   <title>Todo List</title>
 </head>
 <body>
-  <div id="overlay">
-    <form>
-      <!-- <p class="title">#</p> -->
+  <div id="form-overlay">
+    <form id="add-project">
+      <p class="title">Add Project</p>
+      <span id="close-form" class="material-icons-outlined">close</span>
+      <label for="title">Title</label>
+      <input type="text" name="title" id="title">
+      <button type="submit" class="solid">Submit</button>
     </form>
   </div>
   
   <div id="left">
     <div class="title-container">
       <p class="title">Projects</p>
-      <span id="add-project" class="material-icons-outlined fixed-but">add_circle</span>
+      <span id="open-add-project" class="material-icons-outlined fixed-but">add_circle</span>
     </div>
-    <div id="projects-container">
-      <div class="project-item">
-        <p>Title</p>
-        <div class="controls">
-          <span class="material-icons-outlined">edit</span>
-          <span class="material-icons-outlined">delete</span>
-        </div>
-      </div>
-    </div>
+    <div id="projects-container"></div>
   </div>
 
   <div id="right">
