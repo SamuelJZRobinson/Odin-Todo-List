@@ -1,19 +1,21 @@
+import { Todo } from "./todo";
+
 export class Project{
   constructor(title){
     this.title=title;
-    this.taskList=[];
+    this.todoList=[];
   }
 
-  addTask(){
-    const INDEX = this.taskList.length;
-    this.taskList.push(new Task(INDEX,"b",Date,"high"));
-    console.log(this.taskList);
+  addTodo(){
+    const INDEX = this.todoList.length;
+    this.todoList.push(new Todo(INDEX,"b",Date,"high"));
+    console.log(this.todoList);
   }
 
-  deleteTask(index){
-    if (this.taskList.length > 0){
-      this.taskList.splice(index,1);
-      console.log(this.taskList);
+  deleteTodo(index){
+    if (this.todoList.length > 0){
+      this.todoList.splice(index,1);
+      console.log(this.todoList);
     }
   }
 }

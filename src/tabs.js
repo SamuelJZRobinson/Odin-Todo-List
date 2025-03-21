@@ -1,3 +1,5 @@
+import { Project } from "./project";
+
 export class Tabs{
   constructor(){
     this.projectList=[];
